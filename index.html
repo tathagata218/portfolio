@@ -1,34 +1,206 @@
 <!DOCTYPE html>
-<html>
-<link rel="stylesheet" type="text/css" href="style.css">
+<html lang="en">
 <head>
-	<title>Homework1</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Tathagata Das</title>
+    <script
+    src="https://code.jquery.com/jquery-3.2.1.js"
+    integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
+    crossorigin="anonymous"></script>
+   
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>    
+    <link rel="stylesheet" href="style.css" media="screen" title="no title">
+    <script src="https://d3js.org/d3-timer.v1.min.js"></script>
+    <script type="text/javascript" src="app.js"></script>
 </head>
 <body>
-<div id="headerPortion">
-    <p>Header</p>
-  </div>
-  <div id="navPortion">
-    <p>Nav</p>
-  </div>
-  <div id="section">
-    <p>Section</p>
-      <div id="article" >
-        <p>article</p>
-      
-          <div id="h1h2">
-            <p>h1h2h3</p>
-          </div>
-          <div id="ptag">
-            <p>p</p>
-          </div>
-      </div>
+    
+    <nav class="navbar navbar-inverse navbar-fixed-top container">
+        <div class="container-fluid">
+        <div  class="row">
+        <div id="test" class="col-md-6 col-md-offset-3">
+                <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                          <span class="icon-bar"></span>
+                          <span class="icon-bar"></span>
+                          <span class="icon-bar"></span>                        
+                        </button>
+                        
+                      </div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+             <ul id="navItems" class="nav navbar-nav">
+                    <!-- <li><a href="#">Home</a></li> -->
+                    <li><a href="#aboutMe" class = "navLinks">About</a></li>
+                    <li><a href="#myPortfolio" class = "navLinks">Portfolio</a></li>
+                    <li><a href="#educationMe" class = "navLinks">Education</a></li>
+                    <li><a href="#contactMe" class = "navLinks">Contact</a></li>                    
+                 </ul>
+           
+        </div>
+        </div>
+        </div>
+        </div>
+    </nav>
+
+    <div class="container" id="animationStuff" >
+         <canvas id="canvasStyle" height="460" width="1170" ></canvas>
+            <div id ="welcomeDiv"><h1 id="message">Welcome !!! </h1></div>
+          <script src="./animSec.js"></script>  
+        </div>
+
+        <div class="container">
+        <div id="aboutMe">
+            <div class="row">
+                
+                    <div class="row">
+                        <h1>About</h1>
+                        <hr>
+                        <div id="img" class="col-sm-3">
+                            <img class="img-responsive" id="profileImg" height="400" width="400" src="images/LinkedIn Profile Pic.jpg" alt="profile-img">
+                        </div>  
+                   
+                    <div id="img2" class="col-sm-7 col-sm-offset-1">
+                            <p>
+                            A Creative, Problem-Solving, analytic Front-End-Developer with experience in Object Oriented Programming, Algorithms, and User-Friendly Design. Dedicated to learning new things, and love to develop new applications.
+                            </p>
+                            <hr>
+                            <p>Front-End & JavaScript Developer</p>
+                    </div>
+                 
+                </div>
+            </div>
+        </div>
     </div>
-  <div id="aside">
-    <p>aside<p>
-  </div>
-  <div id="footer">
-    <p>footer</p>
-  </div>
+
+    <div class="container">
+        <div id="myPortfolio">
+            <h1>My Portfolio</h1>
+            <hr>
+        <div id="portContainer" class="row">
+            <div class="col-md-12">
+        <div id="buttonCont1" class="col-md-1">
+            <button id="leftArrowBtn" class="btn btn-lg btn-default "><span class="glyphicon glyphicon-circle-arrow-left"></span></button>
+        </div>
+        <div id="profPicInfo" class="col-md-10">
+            <div id="displayDiv" ></div>
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <div id="displayInfo"></div>
+            </div>
+        </div>
+        </div>
+        <div id="buttonCont2" class="col-md-1">
+            <button id="rightArrowBtn" class="btn btn-lg btn-default"><span class="glyphicon glyphicon-circle-arrow-right"></span></button>
+        </div>
+        </div>
+        </div>
+        </div>
+    </div>
+
+<!-- this is the education part -->
+<div class="container">
+        <div id="educationMe">
+            <div class="row">
+                
+                    <div class="row">
+                        <h1>Education/Skills</h1>
+                        <hr>
+                        <div id="img" class="col-sm-7">
+      
+                       
+                                <h1>Education</h1>
+                                <hr>
+                                <h1>Degrees : </h1>    
+                                <h2>Bachelors Of Science Mechanical Engineering</h2>
+                                <h3>Louisiana State University</h3>
+                                <hr>
+                                <h1>Certifications : </h1>
+                                <h3>Engineer in Training (EIT) id - 54683</h2>
+                                <h3>Full Stack Developer - University Of Texas at Austin Coding Bootcamp </h2>
+
+                        </div>
+                        <div class= "col-sm-3 col-sm-offset-1">
+                        <h1>Skills</h1>
+                        <hr>
+                        <p>JavaScript, ReactJS, Bootstrap, CSS, CSS3, HTML, HTML5, NodeJS, C++, ExpressJS, jQuery, MySQL, SequalizeJS, MongoDB, ES6, D3.JS, Microsoft Excel, Microsoft Access, Firebase, Mathlab, Power Point </p>    
+                        </div>  
+                   
+                  
+            </div>
+        </div>
+    </div>
+    </div>
+    
+<!-- this is the edutcation part -->
+
+    <div class="container">
+            <div id="contactMe">
+                <div class="row">
+                <div class="col-md-3">
+                    <h1 id="contactMeHeader">Contact Me</h1>
+                </div>
+            <div  class="col-md-4 col-md-offset-5">
+                <div class="row">
+                 <div class="col-md-2 col-md-offset-1">   
+                <button href="#" class=" btn-lg compIcon"><a href="https://github.com/tathagata218" target="_blank"><span class="fa fa-github"></a></span></button>
+                </div>
+            <div class="col-md-2">  
+                <button class=" btn-lg compIcon"><a href="https://www.linkedin.com/in/tathagata-das" target="_blank"><span class="fa fa-linkedin-square"></span></a></button>
+            </div>
+            <div class="col-md-2">  
+                <button class=" btn-lg compIcon"><a href="https://stackoverflow.com/users/8586139/t-das?tab=profile" target="_blank"><span class="fa fa-stack-overflow"></span></a></button> 
+            </div>
+            <div class="col-md-2">  
+                <button class=" btn-lg compIcon"><a href="https://codepen.io/tdas4/" target="_blank"><span class="fa fa-codepen"></span></a></button> 
+            </div>
+            
+            
+        
+            </div>
+            </div>
+            </div>
+                <hr id="cpd">
+                <div class="row">
+                <!-- <div class="col-md-5 ">
+                    <form action="">
+                        <div class="form-group">
+                                    <label >Name :</label>
+                                    <input  type="text" class="form-control typeInput">
+                                    <label >Email :</label>
+                                    <input type="email" class="form-control typeInput" >
+                                    <label>Message :</label>
+                                   <textarea class="form-control typeInput" name="suff" id="textArea" cols="3" rows="3"></textarea>
+
+                                    <button id="submitButton" type="submit" class="btn btn-primary">Submit</button>
+                                       
+                        </div>
+                    
+                    </form>
+                </div> -->
+                <div class="col-md-11 col-md-offset-1">
+                    <h2> Tathagata (Argha) Das</h2>
+                    <h3>Email : tathagata218@yahoo.com</h3>
+                    <h3>Phone : (225) 284-2763</h3>
+
+                </div>
+                </div>
+            </div>
+        </div>
+
+        <footer id="footer">
+            <h3 style="color:white"><span style="color:white;" class="glyphicon glyphicon-copyright-mark"></span>  By Tathagata Das 2017</h3>
+        </footer>
+
+
+
 </body>
 </html>
