@@ -58,8 +58,8 @@ border-radius: 15px;
 #welcomeDiv{
     margin: 0;
     position: absolute;
-    top: 425px;
-    right :140px;
+    top: 65%;
+    right :30%;
     height: 120px;
     width:300px ;
     font-family: 'Monoton', cursive;
